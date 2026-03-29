@@ -1,0 +1,56 @@
+{
+   "fieldSets": [
+      {
+         "fields": [
+               {
+                  "name": "qtdDiretores",
+                  "label": "Quantidade de Diretores",
+                  "type": "select",
+                  "dataType": "int",
+                  "typeOptions": {
+                     "validValues": [
+                           {"value": "1"},
+                           {"value": "2"},
+                           {"value": "3"},
+						   {"value": "4"},
+						   {"value": "5"}
+                     ]
+                  },
+                  "defaultValue": "3"
+               },
+					  {
+                  "name": "qtdGerentes",
+                  "label": "Quantidade de Gerentes",
+                  "type": "select",
+                  "dataType": "int",
+                  "typeOptions": {
+                     "validValues": [
+                           {"value": "1"},
+                           {"value": "2"},
+                           {"value": "3"},
+						   {"value": "4"},
+				           {"value": "5"}
+                     ]
+                  },
+                  "defaultValue": "3"
+               },
+					  {
+                  "name": "qtdFuncionarios",
+                  "label": "Quantidade de Funcionários",
+                  "type": "select",
+                  "dataType": "int",
+                  "typeOptions": {
+                     "validValues": [
+                           {"value": "1"},
+                           {"value": "2"},
+                           {"value": "3"},
+						   {"value": "4"},
+						   {"value": "5"}
+                     ]
+                  },
+                  "defaultValue": "3"
+               }
+         ]
+      }
+   ]
+}
