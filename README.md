@@ -1,57 +1,91 @@
-🌳 README — Fragmento Organograma
-🧩 Sobre o Projeto
+# 🌳 Dynamic Organizational Chart Fragment for Liferay
 
-O Organograma é um componente visual para exibição de estruturas organizacionais dentro do Liferay DXP.
+## 🧩 About the Project
 
-O objetivo foi permitir a construção de organogramas dinâmicos, editáveis e visualmente intuitivos diretamente pelo no code.
+The **Organizational Chart** is a visual component designed to display organizational structures within **Liferay DXP**.
 
-✨ Funcionalidades
-🧑‍💼 Estrutura hierárquica (presidente → diretor → equipe)
-🖼️ Suporte a imagem por membro
-📝 Nome e cargo editáveis
-🎨 Quantidade de Cards por nível editável
-⚡ Renderização leve (sem bibliotecas externas)
+Its goal is to enable the creation of dynamic, editable, and visually intuitive organograms directly through a **no-code approach**.
 
-🖼️ Exemplo de Uso
-Fazer upload das fotos
+---
 
-⚙️ Estrutura do Fragmento
-/organogram-fragment
- ├── index.html
- ├── main.js
- ├── styles.css
- └── configuration.json
- 
-🚀 Como Usar
-No Liferay, vá até Fragments
-Crie um novo fragmento
-Adicione os arquivos do projeto
-Configure os campos editáveis no HTML:
-  Nome
-  Cargo
-  Imagem
+## ✨ Features
+
+* 🧑‍💼 Hierarchical structure (President → Director → Team)
+* 🖼️ Support for member images
+* 📝 Editable name and role
+* 🎨 Configurable number of cards per level
+* ⚡ Lightweight rendering (no external libraries)
+
+---
+
+## 🖼️ Usage Example
+
+> Upload images or GIFs here to demonstrate the organogram in action.
+
+---
+
+## ⚙️ Fragment Structure
+
+```
+organogram-fragment/
+├── index.html
+├── main.js
+├── styles.css
+└── configuration.json
+```
+
+---
+
+## 🚀 How to Use
+
+1. In Liferay, go to **Fragments**
+2. Create a new fragment
+3. Add the project files:
+
+   * HTML
+   * CSS
+   * JavaScript
   
-Publique e utilize nas páginas
+4. Configure editable fields in the HTML:
 
-🧠 Como Funciona
-O organograma é construído com base em:
+   * Name
+   * Role
+   * Image
+  
+5. Publish and use it on your pages
 
-Estrutura HTML hierárquica (<ul>, <li>)
-Uso das estruturas data-lfr-editable para tornar possivel a configuração dos textos do fragmento editor de página
+---
 
-🧩 Exemplo de Estrutura
+## 🧠 How It Works
+
+The organogram is built based on:
+
+* Hierarchical HTML structure (`<ul>`, `<li>`)
+* Use of `data-lfr-editable` to allow content editing directly within the Liferay page editor
+
+---
+
+## 🧩 Example Structure
+
+```html
 <ul>
   <li>
-    <div class="node presidente">Presidente</div>
+    <div class="node presidente">President</div>
     <ul>
       <li>
-        <div class="node diretor">Diretor</div>
+        <div class="node diretor">Director</div>
       </li>
     </ul>
   </li>
 </ul>
+```
 
-🔧 Melhorias Futuras
- Definir quantos nivel serão possiveis incluir
- Integração com dados dinâmicos (Liferay Objects)
- Responsividade avançada
+---
+
+## 🔧 Future Improvements
+
+* [ ] Define the number of supported hierarchy levels
+* [ ] Integration with dynamic data (Liferay Objects)
+* [ ] Advanced responsiveness
+
+---
