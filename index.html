@@ -1,69 +1,94 @@
 <div id="org-chart">
   <ul id="tree-root">
-    <!-- PRESIDENTE -->
+    <!-- root -->
     <li>
-      <div class="node presidente">
-        <img class="card-img" data-lfr-editable-id="image-presidente" data-lfr-editable-type="image">
-        <div class="textContent">
-            <h1 class="tituloNome" data-lfr-editable-id="name-presidente" data-lfr-editable-type="text">Nome</h1>
-            <p class="cargo" data-lfr-editable-id="cargo-presidente" data-lfr-editable-type="text">Cargo</p>
-            <a class="btnModal">Ver mais</a>
+      <div class="node root"
+        style="--node-bg-color: ${configuration.backgroundColorCards}; --node-border-color: ${configuration.borderColorCards};
+        --node-hover-bg-color: ${configuration.hoverBackgroundColorCards}; --node-hover-border-color: ${configuration.hoverBorderColorCards}">
+        <div class="img-avatar-wrapper">
+          <img class="card-img" data-lfr-editable-id="image-root" data-lfr-editable-type="image">
+        </div>
+        <div class="text-content root">
+          <h3
+            style="--title-name-font-color:${configuration.titleNameColor}; --title-name-font-size:${configuration.fontSizeTitleName};"
+            class="title-name" data-lfr-editable-id="name-root" data-lfr-editable-type="text">Name</h3>
+          <p style="--job-title-font-color: ${configuration.jobTitleColor} ; --job-title-font-size:${configuration.fontSizeJobTitle};"
+            class="job-title" data-lfr-editable-id="job-title-root" data-lfr-editable-type="text">Job Title</p>
         </div>
       </div>
-      <!-- DIRETORES -->
-      <ul class="children diretores">
-        [#list 1..configuration.qtdDiretores as index]
-          <li>
-            <div class="node diretores">
-            <img class="card-img" data-lfr-editable-id="${index}-image-diretor" data-lfr-editable-type="image">
-              <div class="textContent">
-                <h1 class="tituloNome" data-lfr-editable-id="${index}-name-diretor" data-lfr-editable-type="text">Nome</h1>
-                <p class="cargo" data-lfr-editable-id="${index}-cargo-diretor" data-lfr-editable-type="text">Cargo</p>
-                <a class="btnModal">Ver mais</a>
-              </div>
+      <!-- First lvl -->
+      <ul class="children first-lvl">
+        [#list 1..configuration.cardFirstLvl as index]
+        <li>
+          <div class="node first-lvl"
+            style="--node-bg-color: ${configuration.backgroundColorCards}; --node-border-color: ${configuration.borderColorCards};
+          --node-hover-bg-color: ${configuration.hoverBackgroundColorCards}; --node-hover-border-color: ${configuration.hoverBorderColorCards}">
+            <div class="img-avatar-wrapper">
+              <img class="card-img" data-lfr-editable-id="${index}-image-first-lvl" data-lfr-editable-type="image">
             </div>
-            <!-- GERENTES -->
-            <ul class="children gerentes">
-              [#list 1..configuration.qtdGerentes as gIndex]
+            <div class="text-content first-lvl">
+              <h3 style="--title-name-font-color:${configuration.titleNameColor}; 
+              --title-name-font-size:${configuration.fontSizeTitleName};" class="title-name"
+                data-lfr-editable-id="${index}-name-first-lvl" data-lfr-editable-type="text">Name
+              </h3>
+              <p style="--job-title-font-color: ${configuration.jobTitleColor}; 
+              --job-title-font-size:${configuration.fontSizeJobTitle};" class="job-title"
+                data-lfr-editable-id="${index}-job-title-first-lvl" data-lfr-editable-type="text">Job Title</p>
+            </div>
+          </div>
+          <!-- Second lvl -->
+          <ul class="children second-lvl">
+            [#list 1..configuration.cardSecondLvl as gIndex]
+            <li>
+              <div class="node second-lvl"
+                style="--node-bg-color: ${configuration.backgroundColorCards}; --node-border-color: ${configuration.borderColorCards};
+          --node-hover-bg-color: ${configuration.hoverBackgroundColorCards}; --node-hover-border-color: ${configuration.hoverBorderColorCards}">
+                <div class="img-avatar-wrapper">
+                  <img class="card-img" data-lfr-editable-id="${index}-${gIndex}-image-second-lvl"
+                    data-lfr-editable-type="image">
+                </div>
+                <div class="text-content second-lvl">
+                  <h3 style="--title-name-font-color:${configuration.titleNameColor}; 
+                  --title-name-font-size:${configuration.fontSizeTitleName};" class="title-name"
+                    data-lfr-editable-id="${index}-${gIndex}-name-second-lvl" data-lfr-editable-type="text">Name</h3>
+                  <p style="--job-title-font-color: ${configuration.jobTitleColor} ; --job-title-font-size:${configuration.fontSizeJobTitle};"
+                    class="job-title" data-lfr-editable-id="${index}-${gIndex}-job-title-second-lvl"
+                    data-lfr-editable-type="text">Job Title</p>
+                </div>
+              </div>
+              <!-- Third lvl -->
+              <ul class="children third-lvl">
+                [#list 1..configuration.cardThirdLvl as fIndex]
                 <li>
-                  <div class="node gerentes">
-                    <img class="card-img" data-lfr-editable-id="${index}-${gIndex}-image-gerente" data-lfr-editable-type="image">
-                    <div class="textContent">
-                        <h1 class="tituloNome" data-lfr-editable-id="${index}-${gIndex}-name-gerente" data-lfr-editable-type="text">Nome</h1>
-                        <p class="cargo" data-lfr-editable-id="${index}-${gIndex}-cargo-gerente" data-lfr-editable-type="text">Cargo</p>
-                        <a class="btnModal">Ver mais</a>
+                  <div class="node third-lvl"
+                    style="--node-bg-color: ${configuration.backgroundColorCards}; --node-border-color: ${configuration.borderColorCards};
+          --node-hover-bg-color: ${configuration.hoverBackgroundColorCards}; --node-hover-border-color: ${configuration.hoverBorderColorCards}">
+                    <div class="img-avatar-wrapper">
+                      <img class="card-img" data-lfr-editable-id="${index}-${gIndex}-${fIndex}-image-third-lvl"
+                        data-lfr-editable-type="image">
+                    </div>
+                    <div class="text-content third-lvl">
+                      <h3 style="--title-name-font-color:${configuration.titleNameColor};
+                       --title-name-font-size:${configuration.fontSizeTitleName};" class="title-name"
+                        data-lfr-editable-id="${index}-${gIndex}-${fIndex}-name-third-lvl"
+                        data-lfr-editable-type="text">Name</h3>
+                      <p style="--job-title-font-color: ${configuration.jobTitleColor} ; --job-title-font-size:${configuration.fontSizeJobTitle};"
+                        class="job-title" data-lfr-editable-id="${index}-${gIndex}-${fIndex}-job-title-third-lvl"
+                        data-lfr-editable-type="text">Job Title</p>
                     </div>
                   </div>
-                  <!-- FUNCIONÁRIOS -->
-                  <ul class="children funcionarios">
-                    [#list 1..configuration.qtdFuncionarios as fIndex]
-                      <li>
-                        <div class="node funcionarios">
-                            <img class="card-img" data-lfr-editable-id="${index}-${gIndex}-${fIndex}-image-funcionario" data-lfr-editable-type="image">
-                            <div class="textContent">
-                                <h1 class="tituloNome" data-lfr-editable-id="${index}-${gIndex}-${fIndex}-name-funcionario" data-lfr-editable-type="text">Nome</h1>
-                                <p class="cargo" data-lfr-editable-id="${index}-${gIndex}-${fIndex}-cargo-funcionario" data-lfr-editable-type="text">Cargo</p>
-                                <a class="btnModal">Ver mais</a>
-                            </div>
-                        </div>
-                      </li>
-                    [/#list]
-                  </ul>
-
                 </li>
-              [/#list]
-            </ul>
+                [/#list]
+              </ul>
 
-          </li>
+            </li>
+            [/#list]
+          </ul>
+
+        </li>
         [/#list]
       </ul>
 
     </li>
   </ul>
-
-  <div id="user-card" class="hidden">
-    <h3 id="user-name"></h3>
-    <p id="user-role"></p>
-    <button class="btnCloseModal">Fechar</button>
-  </div>
 </div>

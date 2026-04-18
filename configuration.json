@@ -1,55 +1,148 @@
 {
    "fieldSets": [
       {
+         "label": "Structure Settings",
          "fields": [
-               {
-                  "name": "qtdDiretores",
-                  "label": "Quantidade de Diretores",
-                  "type": "select",
-                  "dataType": "int",
-                  "typeOptions": {
-                     "validValues": [
-                           {"value": "1"},
-                           {"value": "2"},
-                           {"value": "3"},
-						   {"value": "4"},
-						   {"value": "5"}
-                     ]
-                  },
-                  "defaultValue": "3"
+            {
+               "name": "cardFirstLvl",
+               "label": "Number of cards in first level",
+               "type": "select",
+               "dataType": "int",
+               "typeOptions": {
+                  "validValues": [
+                     { "value": "1" },
+                     { "value": "2" },
+                     { "value": "3" },
+                     { "value": "4" },
+                     { "value": "5" }
+                  ]
                },
-					  {
-                  "name": "qtdGerentes",
-                  "label": "Quantidade de Gerentes",
-                  "type": "select",
-                  "dataType": "int",
-                  "typeOptions": {
-                     "validValues": [
-                           {"value": "1"},
-                           {"value": "2"},
-                           {"value": "3"},
-						   {"value": "4"},
-				           {"value": "5"}
-                     ]
-                  },
-                  "defaultValue": "3"
+               "defaultValue": "3"
+            },
+            {
+               "name": "cardSecondLvl",
+               "label": "Number of cards in second level",
+               "type": "select",
+               "dataType": "int",
+               "typeOptions": {
+                  "validValues": [
+                     { "value": "1" },
+                     { "value": "2" },
+                     { "value": "3" },
+                     { "value": "4" },
+                     { "value": "5" }
+                  ]
                },
-					  {
-                  "name": "qtdFuncionarios",
-                  "label": "Quantidade de Funcionários",
-                  "type": "select",
-                  "dataType": "int",
-                  "typeOptions": {
-                     "validValues": [
-                           {"value": "1"},
-                           {"value": "2"},
-                           {"value": "3"},
-						   {"value": "4"},
-						   {"value": "5"}
-                     ]
-                  },
-                  "defaultValue": "3"
-               }
+               "defaultValue": "3"
+            },
+            {
+               "name": "cardThirdLvl",
+               "label": "Number of cards in third level",
+               "type": "select",
+               "dataType": "int",
+               "typeOptions": {
+                  "validValues": [
+                     { "value": "1" },
+                     { "value": "2" },
+                     { "value": "3" },
+                     { "value": "4" },
+                     { "value": "5" }
+                  ]
+               },
+               "defaultValue": "3"
+            }
+         ]
+      },
+      {
+         "label": "Cards Settings",
+         "fields": [
+            {
+               "name": "backgroundColorCards",
+               "label": "Background Color Cards",
+               "type": "colorPicker",
+               "defaultValue": "#f3f3f3"
+            },
+            {
+               "name": "borderColorCards",
+               "label": "Border Color Cards",
+               "type": "colorPicker",
+               "defaultValue": "#f3f3f3"
+            },
+            {
+               "name": "hoverBackgroundColorCards",
+               "label": "Hover Background Color Cards",
+               "type": "colorPicker",
+               "defaultValue": "#dfefff"
+            },
+            {
+               "name": "hoverBorderColorCards",
+               "label": "Hover Border Color Cards",
+               "type": "colorPicker",
+               "defaultValue": "#dfefff"
+            }
+         ]
+      },
+      {
+         "label": "Text Settings",
+         "fields": [
+            {
+               "name": "titleNameColor",
+               "label": "Color of Title Name Field",
+               "type": "colorPicker",
+               "defaultValue": "#000"
+            },
+            {
+               "name": "jobTitleColor",
+               "label": "Color of Job Title Field",
+               "type": "colorPicker",
+               "defaultValue": "#000"
+            },
+            {
+               "name": "fontSizeTitleName",
+               "label": "Font size of Title Name Field",
+               "type": "select",
+               "dataType": "string",
+               "typeOptions": {
+                  "validValues": [
+                     {
+                        "label": "Small",
+                        "value": "20px"
+                     },
+                     {
+                        "label": "Medium",
+                        "value": "24px"
+                     },
+                     {
+                        "label": "Large",
+                        "value": "32px"
+                     }
+                  ]
+               },
+               "defaultValue": "24px"
+            },
+            {
+               "name": "fontSizeJobTitle",
+               "label": "Font size of Job Title Field",
+               "type": "select",
+               "dataType": "string",
+               "typeOptions": {
+                  "validValues": [
+                     {
+                        "label": "Small",
+                        "value": "16px"
+                     },
+                     {
+                        "label": "Medium",
+                        "value": "18px"
+                     },
+                     {
+                        "label": "Large",
+                        "value": "20px"
+                     }
+                  ]
+               },
+               "defaultValue": "18px"
+            }
          ]
       }
    ]
