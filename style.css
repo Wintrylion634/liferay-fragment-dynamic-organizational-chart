@@ -37,8 +37,9 @@ ul {
 
 .node.open+.children {
   display: flex;
-  gap: 6px;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .text-content {
@@ -77,4 +78,18 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.children.accordion-mode {
+  display: none;
+  flex-direction: column;
+}
+
+.children.accordion-mode .node {
+  width: 100%;
+  max-width: 100%;
+}
+
+.node.open+.children.accordion-mode {
+  display: flex;
 }
